@@ -1,0 +1,75 @@
+import random
+
+from random import choice
+
+print ("¡BIENVENIDO AL JUEGO DE PIEDRA, PAPEL O TIJERA!")
+
+def jugador():
+    
+    puntuaciones = 0
+    
+    juego = ['O', '_', 'X'] 
+
+    computadora = (choice((juego)))
+
+    elegir = input("Selecciona O, _ , X: ")
+    
+    if elegir not in juego:
+        print ("Selecciona una opción:")
+    
+    if elegir == computadora:
+        puntuaciones = 0
+        print("¡Empate!")
+
+    if (elegir == 'O'):
+        if (computadora == '_'):
+            puntuaciones = 2
+            print("¡Perdiste!")
+        elif (computadora == 'X'):
+            puntuaciones = 1
+            print("¡Ganaste!")
+
+    if (elegir == '_'):
+        if (computadora == 'X'):
+            puntuaciones = 2
+            print("¡Perdiste!")
+        elif (computadora == 'O'):
+            puntuaciones = 1
+            print("¡Ganaste!")
+
+    if (elegir == 'X'):
+        if (computadora == 'O'):
+            puntuaciones = 2
+            print("¡Perdiste!")
+        elif (computadora == '_'):
+            puntuaciones = 1
+            print("¡Ganaste!")
+
+    return puntuaciones
+
+def main():
+    puntaje_jugador = 0
+    puntaje_compu = 0
+    numero = False
+    while numero==False:
+        puntuaciones = jugador()
+        if puntuaciones == 1:
+            puntaje_jugador += 1
+        elif puntuaciones == 2:
+            puntaje_compu += 1
+        print ("Puntuacion: Ordenador es:", puntaje_compu, "Jugador es:", puntaje_jugador)
+        respuesta=input("¿Seguir jugando? (si tu respuesta es “NO” escribe 5):")
+        if(respuesta == "5"):
+            print("El juego terminó")
+            numero = True
+
+main()
+
+
+
+
+
+
+
+
+
