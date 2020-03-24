@@ -1,0 +1,86 @@
+import math
+
+def sumar(x, y):
+   return x + y
+
+def restar(x, y):
+   return x - y
+
+def multiplicar(x, y):
+   return x * y
+
+def dividir(x, y):
+   return x / y
+
+def mod(x, y):
+   return x % y
+
+print("Seleccione una opción:")
+print("\n\n")
+print("1.Sumar")
+print("2.Restar")
+print("3.Multiplicar")
+print("4.Dividir")
+print("5. Modulo")
+print ("6. Cambiar a menu trigonometrico (solo radianes para angulos)")
+ 
+elegir = input("Ingrese una opción: ")
+
+
+
+if elegir == '1':
+  num1 = float(input("Ingrese el primer número: "))
+  num2 = float(input("Ingrese el segundo número: "))
+  print(num1,"+",num2,"=", sumar(num1,num2))
+
+elif elegir == '2':
+  num1 = float(input("Ingrese el primer número: "))
+  num2 = float(input("Ingrese el segundo número: "))
+  print(num1,"-",num2,"=", restar(num1,num2))
+
+elif elegir == '3':
+  num1 = float(input("Ingrese el primer número: "))
+  num2 = float(input("Ingrese el segundo número: "))
+  print(num1,"*",num2,"=", multiplicar(num1,num2))
+
+elif elegir == '4':
+  num1 = float(input("Ingrese el primer número: "))
+  num2 = float(input("Ingrese el segundo número: "))
+  print(num1,"/",num2,"=", dividir(num1,num2))
+
+elif elegir == '5':
+  num1 = float(input("Ingrese el primer número: "))
+  num2 = float(input("Ingrese el segundo número: "))
+  print(num1,"%",num2,"=", mod(num1,num2))
+
+elif elegir == '6':
+  print("Seleccione una opción:")
+  print("\n\n")
+  print("1.Convertir de radianes a grados")
+  print("2.Convertir de grados a radianes")
+  print("3.Seno")
+  print("4.Coseno")
+  print("5.Tangente")
+  seleccionar = input("Elija la opción que desee ejecutar:")
+  numero = float(input("Ingrese el numero:"))
+
+  if seleccionar == '1':
+   print("El valor del angulo",numero," rad en grados es de:")
+   print (math.degrees(numero))
+  elif seleccionar == '2':
+   print("El valor del angulo",numero,"grad en radianes es de:")
+   print (math.radians(numero))
+
+  elif seleccionar == '3':
+   print("El valor del seno de:", numero)
+   print (math.sin(numero))
+
+  elif seleccionar == '4':
+   print("El valor del coseno de:", numero)
+   print (math.cos(numero))
+
+  elif seleccionar == '5':
+   print("El valor del tangente de:", numero)
+   print (math.tan(numero))
+else:
+   print("Selección inválida")
